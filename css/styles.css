@@ -1,0 +1,126 @@
+/* Font Mixins */
+/* CSS Custom Properties*/
+:root {
+  --clr-primary: hsl(158, 36%, 37%);
+  --clr-primary-hover: hsl(158, 42%, 18%);
+  --clr-secondary: hsl(30, 38%, 92%);
+  --clr-darkblue: hsl(212, 21%, 14%);
+  --clr-lightblue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* img defaults */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* default font size */
+html {
+  font-size: 0.875rem;
+}
+
+body {
+  background-color: var(--clr-secondary);
+}
+
+.card {
+  max-width: 21.4375rem;
+  margin-block: 1.75rem;
+  margin-inline: auto;
+  background-color: var(--clr-white);
+  border-radius: 0.625rem;
+}
+.card__image {
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+}
+.card__content {
+  padding: 1.5rem;
+}
+.card__category {
+  color: var(--clr-lightblue);
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-size: 0.75rem;
+  line-height: auto;
+  font-weight: 500;
+  letter-spacing: 0.3125rem;
+}
+.card__title {
+  color: var(--clr-darkblue);
+  margin-top: 0.75rem;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.card__description {
+  color: var(--clr-lightblue);
+  margin-top: 1rem;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.card__price {
+  color: var(--clr-primary);
+  margin-top: 1.5rem;
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.card__price span {
+  color: var(--clr-lightblue);
+  text-decoration: line-through;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.card__button {
+  background-color: var(--clr-primary);
+  margin-top: 1.25rem;
+  color: var(--clr-white);
+  border-radius: 0.5rem;
+  border: none;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-size: 0.875rem;
+  line-height: auto;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=styles.css.map */
