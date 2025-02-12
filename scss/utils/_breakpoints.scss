@@ -1,0 +1,18 @@
+@use 'functions' as f;
+
+// Sass Map
+$breakpoints-up: (
+	'medium': 600px,
+	'large': 900px,
+	'xlarge': 1100px,
+	'xxlarge': 1440px,
+);
+
+// NOTE: map-get() is a Sass function to retrieve the contents of the Sass Map
+// @param - 1st parameter is the name of the Sass map,
+// @param - 2nd parameter is a variable to contain what ever value from the Sass map when @including the mixin
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}

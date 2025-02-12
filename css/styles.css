@@ -18,25 +18,18 @@
   box-sizing: border-box;
 }
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
 /* img defaults */
 img {
   display: block;
   max-width: 100%;
 }
 
-/* default font size */
-html {
-  font-size: 0.875rem;
-}
-
 body {
   background-color: var(--clr-secondary);
+}
+
+main {
+  min-height: 100vh;
 }
 
 .card {
@@ -46,12 +39,37 @@ body {
   background-color: var(--clr-white);
   border-radius: 0.625rem;
 }
+@media (min-width: 600px) {
+  .card {
+    max-width: 37.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 10.9375rem;
+  }
+}
+@media (min-width: 600px) {
+  .card header {
+    max-width: 18.75rem;
+  }
+}
 .card__image {
   border-top-left-radius: 0.625rem;
   border-top-right-radius: 0.625rem;
 }
+@media (min-width: 600px) {
+  .card__image {
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    border-top-right-radius: 0;
+  }
+}
 .card__content {
   padding: 1.5rem;
+}
+@media (min-width: 600px) {
+  .card__content {
+    padding: 2rem;
+  }
 }
 .card__category {
   color: var(--clr-lightblue);
@@ -61,6 +79,7 @@ body {
   line-height: auto;
   font-weight: 500;
   letter-spacing: 0.3125rem;
+  text-transform: uppercase;
 }
 .card__title {
   color: var(--clr-darkblue);
@@ -71,6 +90,11 @@ body {
   line-height: 1;
   font-weight: 700;
 }
+@media (min-width: 600px) {
+  .card__title {
+    margin-top: 1.25rem;
+  }
+}
 .card__description {
   color: var(--clr-lightblue);
   margin-top: 1rem;
@@ -80,7 +104,14 @@ body {
   line-height: 1.6;
   font-weight: 500;
 }
+@media (min-width: 600px) {
+  .card__description {
+    margin-top: 1.5rem;
+  }
+}
 .card__price {
+  display: flex;
+  align-items: center;
   color: var(--clr-primary);
   margin-top: 1.5rem;
   font-family: "Fraunces", serif;
@@ -88,6 +119,14 @@ body {
   font-size: 2rem;
   line-height: 1;
   font-weight: 700;
+}
+@media (min-width: 600px) {
+  .card__price {
+    margin-top: 1.8125rem;
+  }
+}
+.card__price span {
+  margin-left: 1.1875rem;
 }
 .card__price span {
   color: var(--clr-lightblue);
@@ -112,6 +151,18 @@ body {
   font-size: 0.875rem;
   line-height: auto;
   font-weight: 700;
+}
+@media (min-width: 600px) {
+  .card__button {
+    margin-top: 1.875rem;
+  }
+}
+.card__button:hover {
+  background-color: var(--clr-primary-hover);
+}
+.card__button span::before {
+  content: url("../images/icon-cart.svg");
+  margin-right: 0.725625rem;
 }
 
 .attribution {
